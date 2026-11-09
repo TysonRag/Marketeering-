@@ -1,0 +1,54 @@
+name: Update Feed the City dashboard
+
+on:
+  schedule:
+    - cron: "7 * * * *"      # every hour, at 7 minutes past
+  workflow_dispatch:          # lets you press "Run workflow" for an instant refresh
+  push:
+    branches: [main]
+    paths: ["site/**"]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dashboard
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pull latest email stats from Brevo
+        if: github.event_name != 'push'
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          CAMPAIGN_IDS: ${{ vars.CAMPAIGN_IDS }}
+          CAMPAIGN_MATCH: ${{ vars.CAMPAIGN_MATCH }}
+        run: node scripts/fetch-stats.mjs
+
+      - name: Save the numbers to the repo (keeps a history)
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "dashboard-bot"
+          git config user.email "dashboard-bot@users.noreply.github.com"
+          git add site/data
+          git diff --cached --quiet || (git commit -m "Update email stats" && git push)
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
