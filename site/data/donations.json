@@ -1,0 +1,7 @@
+{
+  "_note": "Optional. Brevo can't see bank or PayFast payments, so type the funds raised here and commit. Leave amount at null to hide the tile.",
+  "currency": "ZAR",
+  "amount": null,
+  "goal": null,
+  "asOf": null
+}

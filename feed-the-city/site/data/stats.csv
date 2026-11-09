@@ -1,0 +1,3 @@
+campaign_id,name,sent_date,sent,delivered,uniqueOpens,totalOpens,uniqueClicks,totalClicks,hardBounces,softBounces,unsubscribes,complaints
+demo,"Feed the City - launch email (DEMO DATA)",2026-11-06T09:58:23.186Z,1200,1168,489,782,108,140,21,11,6,0
+TOTAL,,,1200,1168,489,782,108,140,21,11,6,0

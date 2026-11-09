@@ -1,0 +1,108 @@
+{
+  "campaignName": "Feed the City",
+  "client": "Bereshith",
+  "updated": "2026-11-09T09:58:23.186Z",
+  "demo": true,
+  "totals": {
+    "sent": 1200,
+    "delivered": 1168,
+    "uniqueOpens": 489,
+    "totalOpens": 782,
+    "uniqueClicks": 108,
+    "totalClicks": 140,
+    "hardBounces": 21,
+    "softBounces": 11,
+    "unsubscribes": 6,
+    "complaints": 0
+  },
+  "links": {
+    "hero_button": 53,
+    "give_r250": 31,
+    "give_r100": 24,
+    "give_r500": 13,
+    "sponsor": 11,
+    "footer_button": 8
+  },
+  "campaigns": [
+    {
+      "id": "demo",
+      "name": "Feed the City - launch email (DEMO DATA)",
+      "subject": "Help us feed the city this season",
+      "sentDate": "2026-11-06T09:58:23.186Z",
+      "sent": 1200,
+      "delivered": 1168,
+      "uniqueOpens": 489,
+      "totalOpens": 782,
+      "uniqueClicks": 108,
+      "totalClicks": 140,
+      "hardBounces": 21,
+      "softBounces": 11,
+      "unsubscribes": 6,
+      "complaints": 0,
+      "links": {
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=hero_button": 53,
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=give_r250": 31,
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=give_r100": 24,
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=give_r500": 13,
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=sponsor": 11,
+        "https://example.org/donate?utm_campaign=feed_the_city&utm_content=footer_button": 8
+      }
+    }
+  ],
+  "history": [
+    {
+      "t": "2026-11-06T09:58:22.849Z",
+      "delivered": 1168,
+      "uniqueOpens": 182,
+      "uniqueClicks": 40
+    },
+    {
+      "t": "2026-11-06T17:58:22.889Z",
+      "delivered": 1168,
+      "uniqueOpens": 220,
+      "uniqueClicks": 48
+    },
+    {
+      "t": "2026-11-07T01:58:22.930Z",
+      "delivered": 1168,
+      "uniqueOpens": 259,
+      "uniqueClicks": 57
+    },
+    {
+      "t": "2026-11-07T09:58:22.971Z",
+      "delivered": 1168,
+      "uniqueOpens": 301,
+      "uniqueClicks": 66
+    },
+    {
+      "t": "2026-11-07T17:58:23.014Z",
+      "delivered": 1168,
+      "uniqueOpens": 337,
+      "uniqueClicks": 74
+    },
+    {
+      "t": "2026-11-08T01:58:23.054Z",
+      "delivered": 1168,
+      "uniqueOpens": 374,
+      "uniqueClicks": 82
+    },
+    {
+      "t": "2026-11-08T09:58:23.099Z",
+      "delivered": 1168,
+      "uniqueOpens": 408,
+      "uniqueClicks": 90
+    },
+    {
+      "t": "2026-11-08T17:58:23.144Z",
+      "delivered": 1168,
+      "uniqueOpens": 446,
+      "uniqueClicks": 98
+    },
+    {
+      "t": "2026-11-09T01:58:23.187Z",
+      "delivered": 1168,
+      "uniqueOpens": 489,
+      "uniqueClicks": 108
+    }
+  ]
+}
